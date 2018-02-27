@@ -1,0 +1,5 @@
+{
+    "menuName": "Hello",
+    "entry": "/hello",
+    "entryComponent": "Entry"
+}

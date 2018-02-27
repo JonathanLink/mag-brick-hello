@@ -1,0 +1,16 @@
+{
+  "name": "survey_brick",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "hapi": "^17.0.1",
+    "mongoose": "^4.13.4"
+  }
+}

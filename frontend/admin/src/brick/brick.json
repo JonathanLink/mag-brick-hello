@@ -1,0 +1,5 @@
+{
+    "menuName": "Survey",
+    "entry": "/survey/start",
+    "entryComponent": "Start"
+}

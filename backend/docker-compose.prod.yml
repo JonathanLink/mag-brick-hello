@@ -1,0 +1,30 @@
+version: '3'
+services:
+
+  hello_api:
+    build: .
+    ports:
+      - 8000
+    volumes:
+      - @BASE_PATH@mag/mag-engine/apps/@APP_NAME@/bricks/@BRICK_NAME@:/home/node/brick # absolute path
+    depends_on:
+      - hello_mongo
+    environment: 
+      - NODE_ENV=production
+      - APP_NAME=@APP_NAME_ENV@
+      - BRICK_NAME=hello
+    networks:
+      - magengine_default
+
+  hello_mongo:
+    image: mongo:3.0-wheezy
+    ports:
+      - 27017
+    volumes:
+      - @BASE_PATH@mag/mag-engine/apps/@APP_NAME@/bricks/@BRICK_NAME@/database-prod:/database # absolute path
+    networks:
+      - magengine_default
+      
+networks:
+  magengine_default:
+    external: true
