@@ -33,13 +33,6 @@ async function main() {
    
     try {
         let brickRoutes = API.routes.map(r => { r.path = `/api/brick/${process.env.BRICK_NAME}` + r.path; return r; })
-        
-        /*brickRoutes.push({ 
-            method: '*',
-            path: '/api/brick/hello/',
-            handler: (request, h)=> h.response()
-        })*/
-
         server.route(brickRoutes)
     } catch (err) {
         console.log(err)
