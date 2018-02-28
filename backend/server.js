@@ -7,7 +7,12 @@ const message = require('./api/models/message.js')
 
 const server = Hapi.Server({ 
     host: '0.0.0.0', 
-    port: 8000
+    port: 8000,
+    routes: { cors: {
+            origin: ['*'],
+            additionalHeaders: ["Access-Control-Allow-Headers", "Access-Control-Allow-Methods"]
+        }
+    }
 })
 
 
@@ -28,6 +33,13 @@ async function main() {
    
     try {
         let brickRoutes = API.routes.map(r => { r.path = `/api/brick/${process.env.BRICK_NAME}` + r.path; return r; })
+        
+        /*brickRoutes.push({ 
+            method: '*',
+            path: '/api/brick/hello/',
+            handler: (request, h)=> h.response()
+        })*/
+
         server.route(brickRoutes)
     } catch (err) {
         console.log(err)

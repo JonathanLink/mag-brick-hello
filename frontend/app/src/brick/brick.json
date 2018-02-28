@@ -1,5 +1,6 @@
 {
     "menuName": "Hello",
     "entry": "/hello",
-    "entryComponent": "Entry"
+    "entryComponent": "Entry",
+    "basePath": "127.0.0.1:9999"
 }

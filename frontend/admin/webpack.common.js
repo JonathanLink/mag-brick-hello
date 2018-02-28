@@ -88,7 +88,7 @@ let config = {
         contentBase: [path.resolve(__dirname, './dist')],
         host: 'localhost',
         historyApiFallback: true,
-        port: 8082
+        port: 8889
     }
 }
 

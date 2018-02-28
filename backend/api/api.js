@@ -6,6 +6,11 @@ const API = {
                 method: 'GET',
                 path: '/hello',
                 handler: routes.getHello
+            },
+            { 
+                method: 'PUT',
+                path: '/hello',
+                handler: routes.putHello
             }]
 }
 

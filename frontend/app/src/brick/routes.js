@@ -1,9 +1,8 @@
 import Entry from './components/Entry'
 
-
 export default {
   routes: [{
-    path: '/entry',
+    path: '/hello/entry',
     component: Entry,
   }]
 }
